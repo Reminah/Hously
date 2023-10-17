@@ -1,0 +1,189 @@
+<html>
+    <head>
+        <title>SALEM </title>
+            <style>
+                 * {
+                   margin: 0;
+                   line-height: 1.5;
+
+                }
+                body{
+                    margin: 0;
+                    background-color:greenyellow ;
+                } 
+                .header{
+                    /*background-color:greenyellow;*/
+                    background: linear-gradient(greenyellow,white);
+                    color:black;
+                    font-size: 20px;
+                    
+                                       
+                }
+                .topnav {
+                    background-color:greenyellow;
+                    overflow: hidden;
+                }
+                .topnav a{
+                    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    color:black;
+                    text-align:center;
+                    text-decoration:none;
+                    padding-right : 60px;
+                    padding-left: 30px;
+                }
+                .topnav a:hover{
+                    background: linear-gradient(greenyellow,white);
+                    color: black;
+                }
+                .content{
+                    font-weight: normal;
+                    text-indent: 70px;
+                    /*background-color: white;*/
+                    background: linear-gradient(white,greenyellow);
+                    color:black;
+                    font-size: 15px;
+                    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                }
+                .footer{
+                    background-color:green;
+                    color:black;
+                    font-size:20px;
+                }
+                .demo{
+                    background: linear-gradient(greenyellow,white);
+                }
+                table{
+                  border-collapse: collapse;
+                  width: 800px;
+                }
+                th,td{
+                    text-align: center;
+                    padding: 10px;
+                }
+                tr:nth-child(odd){
+                    background-color: rgb(221, 250, 177);
+                }
+                th{
+                    background-color: rgb(22, 22, 21);
+                    color: white;
+                }
+                h4{
+                    
+                    font-size: 20px;
+                    border-color: black;
+                    border-bottom: 5px;
+                    border-left: 5px;
+                }
+                #dropdown{
+                    background-color: white;
+                    padding-left: 20px;
+                    padding-right: 30px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    border-color: greenyellow;
+                    border-width: 3px;
+                    text-align: center;  
+                }                  
+            </style>
+    </head>
+        <body>
+            <div class="topnav">
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a> 
+            </div>
+           
+            <div class="header">
+                <h1><img src="C:\Users\Lenovo B50\Downloads\logo.jpeg"
+                    style="width:150;height:60">
+                    SALEM PROPERTY MANAGEMENT  
+                </h1>                       
+           
+            <h2>
+                <div class="content" id="index"> 
+                            
+                    Salem offers the ultimate investment opportunity in Kenya, Uganda and Mauritius for property owners. Experience unparalleled returns of 10-15% on your investment in dollars, making it the perfect choice for maximising your financial gains.
+                    Experience our meticulous selection process where only the top 7% of presented properties are chosen to be part of our portfolio. We prioritise architectural excellence, innovative design, sustainable practices, and prime locations. Schedule a consultation with us today and discover how your property can
+                    meet our rigorous standards and stand out among the best.
+                    <br/>
+                    <img src="C:\Users\Lenovo B50\Downloads\apartment.jpeg"
+                    style="width:700;height:400;margin-left:10px">                         
+                    
+               <br>
+            <h4> Explore what we have to offer
+               <br>
+               <select id="dropdown" onchange="property()">
+               <p> 
+                <option>PROPERTY</option>
+                <option>Shalo</option>
+                <option>Dorien</option>
+                <option>Ssalongo</option></p>
+            </select>
+            <br>
+            <select id="dropdown" onchange="location()">
+                <option>LOCATION</option>
+                <option>Thika</option>
+                <option>Athi River</option>
+                <option>Kitengela</option>
+            </select>
+            <br>
+            <select id="dropdown" onchange="bedrooms()">
+                <option>BEDROOMS</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+            </h4>
+            
+                    <!--<div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Location</th>
+                                <th>Bdr</th>
+                                <th>Rent</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Shalo</td>
+                                <td>Thika</td>
+                                <td>2</td>
+                                <td>18000</td>
+                            </tr>
+                            <tr>
+                                <td>Dorien</td>
+                                <td>Athi</td>
+                                <td>1</td>
+                                <td>12000</td>
+                            </tr>
+                            <tr>
+                                <td>Ssalongo</td>
+                                <td>Kitengela</td>
+                                <td>1</td>
+                                <td>10000</td>
+                            </tr>
+                        </tbody>                                        
+                    </table>
+                </div>-->
+            </h2>
+           
+            <h3>Our offices are located at:</h3>
+            <p id="demo"></p>
+            
+
+            
+            
+        </body>
+        <script>
+            const counties= ["MACHAKOS","KIAMBU","KAJIADO"];
+            let text=""
+            for(let i=0;i<counties.length;i++){text += counties[i] +"<br>"};
+            //let i,len,text;
+            //for (let i=0,len=counties.length,tect = "";i<len;i++){text+=counties[i]+"<br>"}
+            document.getElementById("demo").innerHTML=text;
+        
+        </script>
+
+</html>
